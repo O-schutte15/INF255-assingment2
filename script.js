@@ -15,6 +15,7 @@ const animals = [
 
 // ---------------------------------------------------------------------------
 // Task 1 — Animal names with .map()
+//Made a new list with just the names of the animals using the .map().
 const animalNames = animals.map(function (animal) {
   return animal.name;
 });
@@ -24,6 +25,7 @@ console.log(animalNames);
 
 // ---------------------------------------------------------------------------
 // Task 2 — Log each animal with .forEach()
+// Goes through each animal to see their name and species.
 animals.forEach(function (animal) {
   console.log(animal.name, animal.species);
 });
@@ -31,6 +33,10 @@ animals.forEach(function (animal) {
 
 // ---------------------------------------------------------------------------
 // Task 3 — Log each animal again with for...of
+// Logs the age and adoption status of each animal
+for (const animal of animals) {
+  console.log(animal.age, animal.adopted);
+}
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
