@@ -106,8 +106,25 @@ console.log(adoptedCats);
 
 // ---------------------------------------------------------------------------
 // Task 9 — Write makeSpeciesChecker (a closure)
+// Make a function that checks for a specific species
+function makeSpeciesChecker(species) {
+  return function (animal) {
+    return animal.species === species;
+  };
+}
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
 // Task 10 — Build isDog and isRabbit, then log their names
+//Gets the names of the dogs and rabbits
+const isDog = makeSpeciesChecker("dog");
+const isRabbit = makeSpeciesChecker("rabbit");
+
+const dogNames = animals.filter(isDog).map(getName);
+const rabbitNames = animals.filter(isRabbit).map(getName);
+
+console.log(dogNames);
+console.log(rabbitNames);
+
+//
 // ---------------------------------------------------------------------------
