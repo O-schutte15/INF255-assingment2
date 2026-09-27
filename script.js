@@ -41,6 +41,17 @@ for (const animal of animals) {
 
 // ---------------------------------------------------------------------------
 // Task 4 — Adopted and available animals with .filter()
+//Separates the animals into two lists, one for adopted and one for available.
+const adoptedAnimals = animals.filter(function (animal) {
+  return animal.adopted === true;
+});
+
+const availableAnimals = animals.filter(function (animal) {
+  return animal.adopted === false;
+});
+
+console.log(adoptedAnimals);
+console.log(availableAnimals);
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
