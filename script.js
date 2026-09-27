@@ -82,10 +82,26 @@ console.log(averageAge);
 
 // ---------------------------------------------------------------------------
 // Task 7 — Write isCat, isAdopted, and getName
+// Check for any Cats
+function isCat(animal) {
+  return animal.species === "cat";
+}
+//Check adoption status
+function isAdopted(animal) {
+  return animal.adopted === true;
+}
+//Get animal's name
+function getName(animal) {
+  return animal.name;
+}
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
 // Task 8 — Adopted cats, using your own functions as callbacks
+// Gets the names of all adopted cats
+const adoptedCats = animals.filter(isCat).filter(isAdopted).map(getName);
+
+console.log(adoptedCats);
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
