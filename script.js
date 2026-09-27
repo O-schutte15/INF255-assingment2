@@ -27,7 +27,7 @@ console.log(animalNames);
 // Task 2 — Log each animal with .forEach()
 // Goes through each animal to see their name and species.
 animals.forEach(function (animal) {
-  console.log(animal.name, animal.species);
+  console.log(`Name: ${animal.name} Species: ${animal.species}`);
 });
 // ---------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ animals.forEach(function (animal) {
 // Task 3 — Log each animal again with for...of
 // Logs the age and adoption status of each animal
 for (const animal of animals) {
-  console.log(animal.age, animal.adopted);
+  console.log(`Age: ${animal.age} Adopted: ${animal.adopted}`);
 }
 // ---------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ console.log(availableAnimals);
 // ---------------------------------------------------------------------------
 // Task 5 — Available dogs with method chaining
 // Gets names of any available dogs
-const availableDogNames = animals
+const availableDogs = animals
   .filter(function (animal) {
     return animal.species === "dog" && animal.adopted === false;
   })
@@ -65,7 +65,7 @@ const availableDogNames = animals
     return animal.name;
   });
 
-console.log(availableDogNames);
+console.log(availableDogs);
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
